@@ -1,5 +1,9 @@
 
-
+#GetThePromote函数返回一个dataframe,
+# file 为一个dataframe，且不能有空项。第一行含有“副高5”，“副高6”，“副高7”，中级8，中级9，中级10，初级11，初级12，初级13字样。
+#groups 指明那些职称想用来计算的基数，如副高，中级，初级。
+# grade 具体到职称的级数 如 副高7， 计算其有几个名额可以用来晋升。
+# weight 对应grade 分配到的计算系数。
 GetThePromote<-function(file = file, groups=groups, grade=grade, weight = weight){
   
   resultMatrix = NULL
@@ -98,6 +102,7 @@ parseNumber<-function(numbers, efficient){
   
 
 }
+
 
 #################################################################################################
 thedata <- read.csv("test.csv", header=T)
